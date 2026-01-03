@@ -130,10 +130,8 @@ Dataset **tidak disertakan** dalam repository ini.
 
 ---
 
-## 🔄 (Opsional) Konversi TSV ke CSV
-
-Jika ingin menggunakan versi CSV:
-
+## 🔄 Konversi TSV ke CSV
+Setelah dataset didownload dan strukturnya sudah sesuai dengan diatas, silahkan jalankan script dibawah ini:
 ```bash
 python scripts/convert_mind_tsv_to_csv.py
 ```

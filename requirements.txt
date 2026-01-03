@@ -1,0 +1,19 @@
+# Core
+numpy
+pandas
+scipy
+
+# Machine Learning & NLP
+scikit-learn
+
+# Sparse matrix & similarity
+joblib
+
+# Visualization
+matplotlib
+
+# Progress bar
+tqdm
+
+# Web App
+streamlit

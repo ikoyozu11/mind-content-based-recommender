@@ -73,10 +73,27 @@ dalam repository ini karena ukuran besar dan ketentuan penggunaan dataset.
 
 - Python **3.10+** (disarankan)
 
-Install dependencies:
+Install dependencies di lingkungkan python perangkat anda:
 
 ```bash
 pip install -r requirements.txt
+```
+
+---
+
+## 📦 Clone Repository
+
+Silahkan clone repository ini seperti pada umumnya (contoh dibawah):
+
+```bash
+git clone https://github.com/USERNAME/NAMA-REPOSITORY.git
+cd NAMA-REPOSITORY
+```
+
+Pastikan Python telah terinstall:
+
+```bash
+python --version
 ```
 
 ---
@@ -131,7 +148,9 @@ Dataset **tidak disertakan** dalam repository ini.
 ---
 
 ## 🔄 Konversi TSV ke CSV
-Setelah dataset didownload dan strukturnya sudah sesuai dengan diatas, silahkan jalankan script dibawah ini:
+
+Setelah dataset didownload dan strukturnya sudah sesuai dengan diatas, silahkan jalankan script dibawah ini untuk mengonversi file tsv dataset ke format csv agar mudah dipahami:
+
 ```bash
 python scripts/convert_mind_tsv_to_csv.py
 ```
@@ -171,7 +190,7 @@ Setelah dataset dan artifacts tersedia:
 streamlit run app/streamlit_app.py
 ```
 
-Aplikasi akan terbuka di browser:
+Aplikasi akan terbuka di browser (hanya contoh):
 
 ```
 http://localhost:8501

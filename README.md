@@ -9,7 +9,9 @@ pengguna awam namun tetap informatif untuk kebutuhan akademik.
 ---
 
 ## 🎯 Tujuan Project
+
 Project ini dikembangkan sebagai **Tugas Besar Sistem Pemberi Rekomendasi** dengan tujuan:
+
 - Mengimplementasikan sistem rekomendasi berbasis konten
 - Menyediakan antarmuka pengguna yang mudah digunakan
 - Menyediakan evaluasi model dengan metrik klasifikasi umum
@@ -17,6 +19,7 @@ Project ini dikembangkan sebagai **Tugas Besar Sistem Pemberi Rekomendasi** deng
 ---
 
 ## ✨ Fitur Utama
+
 - 🔍 Pencarian & pemilihan riwayat bacaan (history)
 - 🧠 Content-Based Recommendation (TF-IDF + Cosine Similarity)
 - 📰 Tampilan hasil rekomendasi:
@@ -35,6 +38,7 @@ Project ini dikembangkan sebagai **Tugas Besar Sistem Pemberi Rekomendasi** deng
 ---
 
 ## 🗂️ Struktur Folder Project
+
 ```
 .
 ├── app/
@@ -66,9 +70,11 @@ dalam repository ini karena ukuran besar dan ketentuan penggunaan dataset.
 ---
 
 ## 🧰 Requirements
+
 - Python **3.10+** (disarankan)
 
 Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -76,9 +82,40 @@ pip install -r requirements.txt
 ---
 
 ## 📥 Download Dataset (MIND-small)
-Dataset **MIND-small** dapat diunduh dari sumber resmi Microsoft.
+
+Dataset **MIND-small** disediakan secara gratis untuk keperluan riset oleh Microsoft,
+namun pengguna wajib menyetujui **Microsoft Research License Terms** terlebih dahulu.
+
+### Langkah-langkah Download Dataset
+
+### 1️⃣ Kunjungi Website Resmi
+
+Silakan kunjungi website resmi dataset MIND berikut:
+
+🔗 https://msnews.github.io/
+
+---
+
+### 2️⃣ Setujui Terms of Use
+
+Scroll ke bagian **Download**, lalu centang opsi  
+**“I agree to the Microsoft Research License Terms”**.
+
+**Persetujuan Terms of Use**
+![Persetujuan Terms of Use](docs/images/mind_terms_of_use.png)
+
+---
+
+### 3️⃣ Download Dataset MIND-small
+
+Setelah menyetujui Terms of Use, scroll ke bawah dan unduh dataset **MIND-small**
+pada bagian **Training Set** dan **Validation Set**.
+
+**Pilihan Download Dataset MIND-small**
+![Download Dataset MIND-small](docs/images/mind_download_small.png)
 
 Struktur dataset yang diharapkan:
+
 ```
 datasets/
 ├── MINDsmall_train/
@@ -94,7 +131,9 @@ Dataset **tidak disertakan** dalam repository ini.
 ---
 
 ## 🔄 (Opsional) Konversi TSV ke CSV
+
 Jika ingin menggunakan versi CSV:
+
 ```bash
 python scripts/convert_mind_tsv_to_csv.py
 ```
@@ -102,9 +141,11 @@ python scripts/convert_mind_tsv_to_csv.py
 ---
 
 ## 🧠 Generate Artifacts (WAJIB)
+
 Sebelum menjalankan aplikasi GUI, artifacts model harus dibuat terlebih dahulu.
 
 1. Buka notebook:
+
 ```
 notebooks/content_based_classification.ipynb
 ```
@@ -112,6 +153,7 @@ notebooks/content_based_classification.ipynb
 2. Jalankan seluruh cell sampai selesai
 
 Notebook akan menghasilkan:
+
 ```
 notebooks/artifacts_classification_v2/
 ├── tfidf_vectorizer.pkl
@@ -124,12 +166,15 @@ notebooks/artifacts_classification_v2/
 ---
 
 ## ▶️ Menjalankan Aplikasi Streamlit
+
 Setelah dataset dan artifacts tersedia:
+
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
 Aplikasi akan terbuka di browser:
+
 ```
 http://localhost:8501
 ```
@@ -137,6 +182,7 @@ http://localhost:8501
 ---
 
 ## 🧪 Cara Menggunakan Aplikasi
+
 1. Cari berita menggunakan kata kunci (opsional)
 2. Pilih beberapa berita sebagai riwayat bacaan
 3. Klik **Buat Rekomendasi**
@@ -146,8 +192,10 @@ http://localhost:8501
 ---
 
 ## 📊 Evaluasi Model
+
 Evaluasi dilakukan sebagai klasifikasi biner (relevan vs tidak relevan)
 menggunakan metrik:
+
 - Accuracy
 - Precision
 - Recall
@@ -155,6 +203,7 @@ menggunakan metrik:
 - AUC
 
 Hasil evaluasi tersimpan di:
+
 ```
 notebooks/artifacts_classification_v2/metrics.csv
 ```
@@ -162,6 +211,7 @@ notebooks/artifacts_classification_v2/metrics.csv
 ---
 
 ## 📌 Catatan Akademik
+
 - Sistem ini **tidak menggunakan collaborative filtering**
 - Rekomendasi sepenuhnya berbasis kemiripan konten
 - Fokus pada interpretabilitas dan kemudahan penggunaan
@@ -169,6 +219,7 @@ notebooks/artifacts_classification_v2/metrics.csv
 ---
 
 ## ⚖️ Lisensi & Disclaimer
+
 - Dataset MIND memiliki **Terms of Use** dari penyedia aslinya
 - Repository ini hanya menyertakan **kode dan dokumentasi**
 - Pengguna wajib mengunduh dataset dari sumber resmi
@@ -176,5 +227,6 @@ notebooks/artifacts_classification_v2/metrics.csv
 ---
 
 ## 👤 Author
+
 Project ini dikembangkan untuk keperluan akademik  
 sebagai Tugas Besar mata kuliah **Sistem Pemberi Rekomendasi**.

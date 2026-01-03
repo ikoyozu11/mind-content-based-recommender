@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# IDE
+.vscode/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# DATASETS (do not commit)
+datasets/
+*.tsv
+*.csv
+*.vec
+
+# ARTIFACTS (do not commit)
+notebooks/artifacts_classification_v2/
+*.pkl
+*.npz
+
+# Streamlit cache
+.streamlit/

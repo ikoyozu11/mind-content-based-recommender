@@ -131,7 +131,7 @@ pada bagian **Training Set** dan **Validation Set**.
 **Pilihan Download Dataset MIND-small**
 ![Download Dataset MIND-small](docs/images/mind_download_small.png)
 
-Struktur dataset yang diharapkan:
+Dataset yang sudah didownload silahkan ekstrak dan tambahkan ke folder proyek dengan nama folder **datasets**, lalu sesuaikan strukturnya seperti dibawah ini:
 
 ```
 datasets/
@@ -143,7 +143,7 @@ datasets/
     └── behaviors.tsv (atau behaviors.csv)
 ```
 
-Dataset **tidak disertakan** dalam repository ini.
+Dataset **tidak disertakan** dalam repository ini karena ukurannya yang cukup besar.
 
 ---
 
